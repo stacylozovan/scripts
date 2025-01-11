@@ -1,83 +1,20 @@
 📂 Script Collection: File Management and YouTube Utilities
-🌟 Overview
 This repository contains four Python scripts designed to simplify file management and automate tasks related to YouTube playlists. From converting subtitles to downloading videos or audio, these scripts are efficient and easy to use.
 
-🛠 Scripts
-1. Subtitle Converter (SRT to TXT)
-📄 Converts .srt subtitle files into clean .txt files by removing:
+🌟 Overview of Scripts
+Subtitle Converter (SRT to TXT): This script converts .srt subtitle files into clean .txt files by removing timestamps, line numbers, and text in square brackets (e.g., [music]). Place .srt files in the subtitles/ folder, and the script will generate .txt files in subtitles/TXT.
 
-Timestamps
-Line numbers
-Text in square brackets (e.g., [music]).
-📌 Usage:
+YouTube Subtitle Downloader: This script downloads subtitles from YouTube playlists, saves them in .vtt format, converts them to .srt, and cleans the .srt files by removing duplicates and unnecessary text. To use, enter the playlist URL, specify the subtitle languages (e.g., en, ru), and the cleaned .srt files will be saved in the subtitles/ folder.
 
-Place .srt files in the subtitles/ folder.
-Run the script to generate .txt files in subtitles/TXT.
-2. YouTube Subtitle Downloader
-🎥 Downloads and processes subtitles from YouTube playlists:
+YouTube Video and Audio Downloader: This script downloads videos and audio tracks from YouTube playlists. It allows users to download videos in specific resolutions (e.g., 720p, 1080p) or extract high-quality audio tracks. The downloaded files are saved in Video/ or Audio/ folders. It handles failed downloads and prevents overwriting existing files.
 
-Saves .vtt subtitles in selected languages.
-Converts .vtt to .srt.
-Cleans .srt files by removing duplicates and unnecessary text.
-📌 Usage:
+Batch File Renamer: This script renames files in the same directory by removing a specified number of characters from the beginning of each filename. Place the script in the target directory, input the number of characters to remove, preview the changes, and confirm the renaming process.
 
-Enter the playlist URL.
-Specify desired subtitle languages (e.g., en, ru).
-Cleaned .srt files are saved in the subtitles/ folder.
-3. YouTube Video and Audio Downloader
-⬇️ Downloads videos and audio tracks from YouTube playlists:
-
-Videos: Download in a specific resolution (e.g., 720p, 1080p).
-Audio: Extract high-quality audio tracks.
-Handles failed downloads and prevents overwriting existing files.
-📌 Usage:
-
-Enter the playlist URL.
-Choose to download videos or audio.
-Files are saved in Video/ or Audio/ folders.
-4. Batch File Renamer
-✏️ Renames files in the same directory as the script by removing a specified number of characters from the beginning of each filename.
-
-📌 Usage:
-
-Place the script in the target directory.
-Enter the number of characters to remove.
-Preview the changes and confirm before applying.
 ⚙️ Prerequisites
-Ensure the following tools are installed on your system:
+Ensure the following tools are installed on your system: Python 3.6 or higher, yt-dlp (install via pip install yt-dlp), and ffmpeg (download and add to PATH from ffmpeg.org).
 
-Python 3.6 or higher
-yt-dlp: Install via pip:
-bash
-Copy code
-pip install yt-dlp
-ffmpeg: Download and add to PATH from ffmpeg.org.
-🚀 How to Run
-Clone this repository:
+🚀 How to Use
+Clone this repository using git clone https://github.com/yourusername/your-repo.git and navigate to the directory with cd your-repo. Run the desired script using python script_name.py. Follow the prompts provided by each script to input required information such as playlist URLs or file renaming parameters.
 
-bash
-Copy code
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-Run the desired script:
-
-bash
-Copy code
-python script_name.py
 📝 Notes
-All scripts include error handling for stability.
-Failed downloads and skipped files are logged automatically.
-Ensure ffmpeg is correctly installed for video/audio processing.
-📁 Directory Structure
-plaintext
-Copy code
-├── scripts/
-│   ├── subtitles/
-│   │   ├── TXT/           # Cleaned .txt subtitle files
-│   │   └── .srt files     # Original subtitle files
-│   ├── Video/             # Downloaded videos
-│   ├── Audio/             # Downloaded audio tracks
-│   └── errors.txt         # Log file for failed downloads
-💡 Tip: Combine these scripts to handle subtitle processing, video/audio downloads, and file management seamlessly.
-
-🎉 Happy automating! 😊
+These scripts include error handling to ensure stability. Failed downloads and skipped files are logged automatically in errors.txt. Ensure ffmpeg is installed for video and audio processing. The scripts also prevent overwriting files by checking for conflicts during the renaming or downloading process.
