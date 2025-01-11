@@ -1,20 +1,70 @@
-📂 Script Collection: File Management and YouTube Utilities
+# 📂 Script Collection: File Management and YouTube Utilities
+
+## 🌟 Overview
+
 This repository contains four Python scripts designed to simplify file management and automate tasks related to YouTube playlists. From converting subtitles to downloading videos or audio, these scripts are efficient and easy to use.
 
-🌟 Overview of Scripts
-Subtitle Converter (SRT to TXT): This script converts .srt subtitle files into clean .txt files by removing timestamps, line numbers, and text in square brackets (e.g., [music]). Place .srt files in the subtitles/ folder, and the script will generate .txt files in subtitles/TXT.
+---
 
-YouTube Subtitle Downloader: This script downloads subtitles from YouTube playlists, saves them in .vtt format, converts them to .srt, and cleans the .srt files by removing duplicates and unnecessary text. To use, enter the playlist URL, specify the subtitle languages (e.g., en, ru), and the cleaned .srt files will be saved in the subtitles/ folder.
+## 🛠 Scripts
 
-YouTube Video and Audio Downloader: This script downloads videos and audio tracks from YouTube playlists. It allows users to download videos in specific resolutions (e.g., 720p, 1080p) or extract high-quality audio tracks. The downloaded files are saved in Video/ or Audio/ folders. It handles failed downloads and prevents overwriting existing files.
+### 1. **Subtitle Converter (SRT to TXT)**
 
-Batch File Renamer: This script renames files in the same directory by removing a specified number of characters from the beginning of each filename. Place the script in the target directory, input the number of characters to remove, preview the changes, and confirm the renaming process.
+📄 This script converts `.srt` subtitle files into clean `.txt` files by removing:
+- **Timestamps**
+- **Line numbers**
+- **Text in square brackets** (e.g., `[music]`).
 
-⚙️ Prerequisites
-Ensure the following tools are installed on your system: Python 3.6 or higher, yt-dlp (install via pip install yt-dlp), and ffmpeg (download and add to PATH from ffmpeg.org).
+**How to use**:
+1. Place `.srt` files in the `subtitles/` folder.
+2. Run the script to generate `.txt` files in `subtitles/TXT`.
 
-🚀 How to Use
-Clone this repository using git clone https://github.com/yourusername/your-repo.git and navigate to the directory with cd your-repo. Run the desired script using python script_name.py. Follow the prompts provided by each script to input required information such as playlist URLs or file renaming parameters.
+---
 
-📝 Notes
-These scripts include error handling to ensure stability. Failed downloads and skipped files are logged automatically in errors.txt. Ensure ffmpeg is installed for video and audio processing. The scripts also prevent overwriting files by checking for conflicts during the renaming or downloading process.
+### 2. **YouTube Subtitle Downloader**
+
+🎥 Downloads and processes subtitles from YouTube playlists:
+- Saves subtitles in `.vtt` format.
+- Converts `.vtt` to `.srt`.
+- Cleans `.srt` files by removing duplicates and unnecessary text.
+
+**How to use**:
+1. Enter the playlist URL.
+2. Specify desired subtitle languages (e.g., `en`, `ru`).
+3. Cleaned `.srt` files are saved in the `subtitles/` folder.
+
+---
+
+### 3. **YouTube Video and Audio Downloader**
+
+⬇️ Downloads videos and audio tracks from YouTube playlists:
+- **Videos**: Download in specific resolutions (e.g., `720p`, `1080p`).
+- **Audio**: Extract high-quality audio tracks.
+- Handles failed downloads and prevents overwriting existing files.
+
+**How to use**:
+1. Enter the playlist URL.
+2. Choose to download videos or audio.
+3. Files are saved in `Video/` or `Audio/` folders.
+
+---
+
+### 4. **Batch File Renamer**
+
+✏️ Renames files in the same directory as the script by removing a specified number of characters from the beginning of each filename.
+
+**How to use**:
+1. Place the script in the target directory.
+2. Enter the number of characters to remove.
+3. Preview the changes and confirm before applying.
+
+---
+
+## ⚙️ Prerequisites
+
+Ensure the following tools are installed on your system:
+
+- **Python 3.6 or higher**
+- **yt-dlp**: Install via pip:
+  ```bash
+  pip install yt-dlp
